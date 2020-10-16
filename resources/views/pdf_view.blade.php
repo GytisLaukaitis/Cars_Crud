@@ -25,7 +25,7 @@
             <td>{{ $data->name }}</td>
             <td>{{ $data->email }}</td>
             <td>{{ $data->phone }}</td>
-            <td>{{ $data->comment }}</td>
+            <td>{!! Str::limit($data->comment, 20) !!}</td>
             <td>{{ $data->car['title'] }}</td>
         </tr>
         @endforeach
