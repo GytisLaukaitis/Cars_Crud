@@ -1,22 +1,33 @@
 @extends('layouts.app')
 @section('content')
-<div class="card">
-    <div class="card-header">Customer and his car manufacturer details</div>
-    <div class="card-body">
-        <h5>Customer: {{ $customer->name }} {{$customer->surname}}</h5>
-        <h5>Phone: {{ $customer->phone }}</h5>
-        <h5>Email: {{ $customer->email }}</h5>
-        <h5>Comments: {!! $customer->comment !!}</h5>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header"><h2>Customers car manufacturers details</h2></div>
+                <div class="card-body">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                        <tr>
+        <th><h3>Customer:</h3> {{ $customer->name }} {{$customer->surname}}</th>
+        <th><h3>Phone:</h3> {{ $customer->phone }}</th>
+        <th><h3>Email:</h3> {{ $customer->email }}</th>
+        <th><h3>Comments:</h3> {!! $customer->comment !!}</th>
+        <th><h3>Customers car manufacturer:</h3>  {{ $customer->car['title'] }}</th>
+    </tr>
+</thead>
+
+<div class="card-body">
+    <table class="table table-bordered mb-0">
         <hr>
-        <h5>Customers car manufacturer:  {{ $customer->car['title'] }}</h5>
-        <h5>Available cars of this manufacturer: </h5>
-        <table class="table">
-            <tr>
-                <th>Car title</th>
-                <th>Car release year</th>
-                <th>Car top speed</th>
-                <th>Car price</th>
-                <th>Car description</th>
+        <th><h2>Available cars of this manufacturer: </h2></th>
+        <tbody>
+        <tr>
+                <th><h3>Car title</h3></th>
+                <th><h3>Car release year</h3></th>
+                <th><h3>Car top speed</h3></th>
+                <th><h3>Car price</h3></th>
+                <th><h3>Car description</h3></th>
             </tr>
             @foreach ($customer->car->carModels as $carModel)
             <tr>
@@ -27,6 +38,7 @@
                 <th>{!! $carModel->description !!}</th>
             </tr>
             @endforeach
+        </tbody>
         </table>
     </div>
 </div>
