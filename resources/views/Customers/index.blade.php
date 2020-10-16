@@ -1,13 +1,14 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+    <a class="btn btn-primary" style="float: right;" href="{{ URL::to('/customer/pdf') }}">Export to PDF</a>
     <form action="{{ route('customers.index') }}" method="GET">
         <select name="car_id" id="" class="form-control">
             <option value="" selected enabled>Choose a car manufacturer for filtering customers:</option>
             @foreach ($cars as $car)
-            <option value="{{ $car->id }}" 
-                @if($car->id == app('request')->input('car_id')) 
-                    selected="selected" 
+            <option value="{{ $car->id }}"
+                @if($car->id == app('request')->input('car_id'))
+                    selected="selected"
                 @endif>{{ $car->title }}</option>
             @endforeach
         </select>

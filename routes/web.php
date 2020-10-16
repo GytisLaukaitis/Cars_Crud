@@ -24,6 +24,7 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('carModel', 'App\Http\Controllers\CarModelController');
     Route::resource('customers', 'App\Http\Controllers\CustomerController');
     Route::get('customers/{id}/travel', 'App\Http\Controllers\CustomerController@travel')->name('customers.travel');
+    Route::get('/customer/pdf','App\Http\Controllers\CustomerController@createPDF');
 });
 
 

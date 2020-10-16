@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Barryvdh\DomPDF\Facade as PDF;
 
 
 class CustomerController extends Controller{
@@ -49,7 +50,7 @@ class CustomerController extends Controller{
         return view('Customers.edit', ['customer' => $customer, 'cars' => $cars]);
     }
 
-    
+
     public function update(Request $request, Customer $customer){
         if($request['name'] === null) {
             return Redirect::back()->withErrors(['Customer name is required!']);
@@ -77,5 +78,18 @@ class CustomerController extends Controller{
         $customer = Customer::find($id);
         return view('Customers.travel', ['customer' => $customer]);
     }
+
+      // Generate PDF
+      public function createPDF() {
+        // retreive all records from db
+        $data = Customer::all();
+
+        // share data to view
+        view()->share('customer',$data);
+        $pdf = PDF::loadView('pdf_view', $data);
+
+        // download PDF file with download method
+        return $pdf->download('pdf_file.pdf');
+      }
 
 }
