@@ -24,10 +24,10 @@
         <tbody>
         <tr>
                 <th><h3>Car title</h3></th>
-                <th><h3>Car release year</h3></th>
-                <th><h3>Car top speed</h3></th>
-                <th><h3>Car price</h3></th>
-                <th><h3>Car description</h3></th>
+                <th><h3>Release year</h3></th>
+                <th><h3>Top speed</h3></th>
+                <th><h3>Price</h3></th>
+                <th><h3>Description</h3></th>
             </tr>
             @foreach ($customer->car->carModels as $carModel)
             <tr>
