@@ -13,19 +13,19 @@
                         @csrf
                         <div class="form-group">
                             <label>Name: </label>
-                            <input type="text" name="name" class="form-control">
+                            <input type="text" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Surname: </label>
-                            <input type="text" name="surname" class="form-control"> 
+                            <input type="text" name="surname" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Phone: </label>
-                            <input type="number" name="phone" class="form-control"> 
+                            <input type="number" name="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Email: </label>
-                            <input type="text" name="email" class="form-control"> 
+                            <input type="text" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Comments: </label>

@@ -13,19 +13,19 @@
                         @csrf @method("PUT")
                         <div class="form-group">
                             <label>Name: </label>
-                            <input type="text" name="name" class="form-control" value="{{ $customer->name }}">
+                            <input type="text" name="name" class="form-control" value="{{ $customer->name }}" required>
                         </div>
                         <div class="form-group">
                             <label>Surname: </label>
-                            <input type="text" name="surname" class="form-control" value="{{ $customer->surname }}"> 
+                            <input type="text" name="surname" class="form-control" value="{{ $customer->surname }}" required>
                         </div>
                         <div class="form-group">
                             <label>Phone: </label>
-                            <input type="number" name="phone" class="form-control" value="{{ $customer->phone }}"> 
+                            <input type="number" name="phone" class="form-control" value="{{ $customer->phone }}" required>
                         </div>
                         <div class="form-group">
                             <label>Email: </label>
-                            <input type="text" name="email" class="form-control" value="{{ $customer->email }}"> 
+                            <input type="text" name="email" class="form-control" value="{{ $customer->email }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Comments</label>

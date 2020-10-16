@@ -13,19 +13,19 @@
                         @csrf @method("PUT")
                         <div class="form-group">
                             <label for="">Title: </label>
-                            <input type="text" name="title" class="form-control" value="{{ $carModel->title }}">
+                            <input type="text" name="title" class="form-control" value="{{ $carModel->title }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Years released: </label>
-                            <input type="text" name="yearsReleased" class="form-control" value="{{ $carModel->yearsReleased }}">
+                            <input type="text" name="yearsReleased" class="form-control" value="{{ $carModel->yearsReleased }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Top Speed: </label>
-                            <input type="number" name="topSpeed" class="form-control" value="{{ $carModel->topSpeed }}">
+                            <input type="number" name="topSpeed" class="form-control" value="{{ $carModel->topSpeed }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Price: </label>
-                            <input type="number" name="price" class="form-control" value="{{ $carModel->price }}">
+                            <input type="number" name="price" class="form-control" value="{{ $carModel->price }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Description</label>

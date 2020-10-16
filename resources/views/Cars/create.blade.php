@@ -13,11 +13,11 @@
                        @csrf
                        <div class="form-group">
                            <label>Title: </label>
-                           <input type="text" name="title" class="form-control">
+                           <input type="text" name="title" class="form-control" required>
                        </div>
                        <div class="form-group">
                         <label>Manufacturer country: </label>
-                        <input type="text" name="madein" class="form-control">
+                        <input type="text" name="madein" class="form-control" required>
                        </div>
                        <div class="form-group">
                         <label>Description: </label>

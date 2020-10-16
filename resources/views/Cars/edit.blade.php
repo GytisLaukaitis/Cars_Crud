@@ -13,11 +13,11 @@
                         @csrf @method("PUT")
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" name="title" class="form-control" value="{{ $car->title }}">
+                            <input type="text" name="title" class="form-control" value="{{ $car->title }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Manufacturers country</label>
-                            <input type="text" name="madein" class="form-control" value="{{ $car->madein }}">
+                            <input type="text" name="madein" class="form-control" value="{{ $car->madein }}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Description</label>

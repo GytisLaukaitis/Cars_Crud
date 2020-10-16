@@ -13,19 +13,19 @@
                        @csrf
                        <div class="form-group">
                             <label for="">Title: </label>
-                            <input type="text" name="title" class="form-control">
+                            <input type="text" name="title" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Years released: </label>
-                            <input type="text" name="yearsReleased" class="form-control">
+                            <input type="text" name="yearsReleased" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Top Speed: </label>
-                            <input type="number" name="topSpeed" class="form-control">
+                            <input type="number" name="topSpeed" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Price: </label>
-                            <input type="number" name="price" class="form-control">
+                            <input type="number" name="price" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Description: </label>
