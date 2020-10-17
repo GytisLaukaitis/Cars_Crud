@@ -89,7 +89,7 @@ class CustomerController extends Controller{
         $pdf = PDF::loadView('pdf_view', $data);
 
         // download PDF file with download method
-        return $pdf->download('pdf_file.pdf');
+        return $pdf->stream('pdf_view.pdf');
       }
 
 }
