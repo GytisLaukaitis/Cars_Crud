@@ -32,7 +32,7 @@
             <td>{{ $carModel->price }}</td>
             <td>{!! Str::limit($carModel->description, 20) !!}</td>
             <td>{{ $carModel->car['title'] }}</td>
-            <td>
+            <td style="width: 12%">
                 <form action={{ route('carModel.destroy', $carModel->id) }} method="POST">
                     <a class="btn btn-sm btn-primary" href={{ route('carModel.edit', $carModel->id) }}>Edit</a>
                     @csrf @method('delete')

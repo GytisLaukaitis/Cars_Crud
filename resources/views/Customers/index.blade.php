@@ -4,19 +4,23 @@
 <div class="container">
 
 
-    <a class="btn btn-default" style="float: right;" href="{{ URL::to('/customer/pdf') }}">Export to PDF <i class="far fa-file-pdf" style="color: red;font-size:48px"></i></a>
+    <a class="btn btn-outline-primary" style="float: right; width: auto;" href="{{ URL::to('/customer/pdf') }}">Export to PDF <i class="far fa-file-pdf" style="color: red;font-size:48px"></i></a>
     <form action="{{ route('customers.index') }}" method="GET">
-        <select name="car_id" id="" class="form-control">
-            <option value="" selected enabled>Choose a car manufacturer for filtering customers:</option>
-            @foreach ($cars as $car)
-            <option value="{{ $car->id }}"
-                @if($car->id == app('request')->input('car_id'))
-                    selected="selected"
-                @endif>{{ $car->title }}</option>
-            @endforeach
-        </select>
-        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-    </form>
+        <div class="input-group mb-3">
+            <div style="height: 35px" class="input-group-append">
+                <select name="car_id" id="" class="form-control">
+                    <option value="" selected enabled>Choose a car manufacturer for filtering customers:</option>
+                    @foreach ($cars as $car)
+                    <option value="{{ $car->id }}"
+                        @if($car->id == app('request')->input('car_id'))
+                        selected="selected"
+                        @endif>{{ $car->title }}</option>
+                        @endforeach
+                    </select>
+                    <button style="margin-left: 5px;"  type="submit" class="btn btn-mb btn-outline-primary">Submit</button>
+                </div>
+            </div>
+                </form>
     @if($errors->any())
     <h4 style="color: red">{{$errors->first()}}</h4>
     @endif
@@ -30,7 +34,7 @@
                         New</a>
                 </div>
     <div class="card-body">
-    <table class="table table-bordered mb-0">
+    <table class="table table-bordered mb-auto">
         <thead>
         <tr>
             <th>Name</th>
@@ -52,7 +56,7 @@
             <td>{{ $customer->email }}</td>
             <td>{!! Str::limit($customer->comment, 20) !!}</td>
             <td>{{ $customer->car['title'] }}</td>
-            <td>
+            <td style="width: 16%">
                 <form action={{ route('customers.destroy', $customer->id) }} method="POST">
                     <a class="btn btn-sm btn-success" href={{ route('customers.edit', $customer->id) }}>Edit</a>
                     <a class="btn btn-sm btn-primary" href={{ route('customers.travel', $customer->id) }}>Info</a>
