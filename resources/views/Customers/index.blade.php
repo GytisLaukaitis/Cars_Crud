@@ -1,7 +1,10 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <a class="btn btn-primary" style="float: right;" href="{{ URL::to('/customer/pdf') }}">Export to PDF</a>
+
+
+    <a class="btn btn-default" style="float: right;" href="{{ URL::to('/customer/pdf') }}">Export to PDF <i class="far fa-file-pdf" style="color: red;font-size:48px"></i></a>
     <form action="{{ route('customers.index') }}" method="GET">
         <select name="car_id" id="" class="form-control">
             <option value="" selected enabled>Choose a car manufacturer for filtering customers:</option>

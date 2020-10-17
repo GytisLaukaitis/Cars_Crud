@@ -13,9 +13,6 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/solid.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/light.css') }}">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
@@ -90,5 +87,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
 </body>
 </html>
