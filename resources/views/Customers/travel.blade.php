@@ -27,7 +27,7 @@
                 <th style="border-top: none"><h3>Release year</h3></th>
                 <th style="border-top: none"><h3>Top speed</h3></th>
                 <th style="border-top: none"><h3>Price</h3></th>
-                <th style="border-right: none; border-top: none; width: 100%"><h3>Description</h3></th>
+                <th style="border-right: none; border-top: none; width: auto; text-align:center"><h3>Description</h3></th>
             </tr>
             @foreach ($customer->car->carModels as $carModel)
             <tr style="color: red;">

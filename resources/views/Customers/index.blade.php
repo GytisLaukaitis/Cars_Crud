@@ -4,7 +4,7 @@
 <div class="container">
 
 
-    <a class="btn btn-outline-primary" style="float: right; width: auto;" href="{{ URL::to('/customer/pdf') }}">Export to PDF <i class="far fa-file-pdf" style="color: red;font-size:48px"></i></a>
+    <a class="btn btn-outline-primary" style="float: right; width: auto; overflow: hidden;" href="{{ URL::to('/customer/pdf') }}">Customers PDF <i class="far fa-file-pdf" style="color: red;font-size:48px"></i></a>
     <form action="{{ route('customers.index') }}" method="GET">
         <div class="input-group mb-3">
             <div style="height: 35px" class="input-group-append">
