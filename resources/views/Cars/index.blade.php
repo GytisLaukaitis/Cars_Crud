@@ -14,13 +14,13 @@
                         New</a>
                 </div>
     <div class="card-body">
-    <table class="table table-bordered mb-0">
+    <table class="table table-bordered table-responsive">
         <thead>
         <tr>
-            <th>Title</th>
-            <th>Manufacturer country</th>
-            <th>Description</th>
-            <th>Actions</th>
+            <th style="width: 15%">Title</th>
+            <th style="width: 15%">Manufacturer country</th>
+            <th style="width: 56%">Description</th>
+            <th style="width: 14%">Actions</th>
         </tr>
         </thead>
 
@@ -29,7 +29,7 @@
         <tr>
             <td>{{ $car->title }}</td>
             <td>{{ $car->madein }}</td>
-            <td>{!! Str::limit($car->description, 20) !!}</td>
+            <td>{!! Str::limit($car->description, 80) !!}</td>
             <td style="width: 12%">
                 <form action={{ route('car.destroy', $car->id) }} method="POST">
                     <a class="btn btn-sm btn-primary" href={{ route('car.edit', $car->id) }}>Edit</a>

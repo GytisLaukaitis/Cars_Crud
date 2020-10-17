@@ -11,16 +11,16 @@
                         New</a>
                 </div>
     <div class="card-body">
-    <table class="table table-bordered mb-0">
+    <table class="table table-bordered table-responsive">
         <thead>
         <tr>
-            <th>Title</th>
-            <th>Years relesead</th>
-            <th>Top Speed</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Manufacturer</th>
-            <th>Actions</th>
+            <th style="width: 10%">Title</th>
+            <th style="width: 10%">Years relesead</th>
+            <th style="width: 10%">Top Speed</th>
+            <th style="width: 10%">Price</th>
+            <th style="width: 36%">Description</th>
+            <th style="width: 10%">Manufacturer</th>
+            <th style="width: 14%">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -30,9 +30,9 @@
             <td>{{ $carModel->yearsReleased }}</td>
             <td>{{ $carModel->topSpeed }}</td>
             <td>{{ $carModel->price }}</td>
-            <td>{!! Str::limit($carModel->description, 20) !!}</td>
+            <td>{!! Str::limit($carModel->description, 80) !!}</td>
             <td>{{ $carModel->car['title'] }}</td>
-            <td style="width: 12%">
+            <td>
                 <form action={{ route('carModel.destroy', $carModel->id) }} method="POST">
                     <a class="btn btn-sm btn-primary" href={{ route('carModel.edit', $carModel->id) }}>Edit</a>
                     @csrf @method('delete')
